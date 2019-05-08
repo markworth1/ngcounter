@@ -3,6 +3,7 @@
 
   <div class="counter-buttons">
     <button
+      [disabled]="count <= 0"
       (click)="decrease()"
     >-</button>
 
