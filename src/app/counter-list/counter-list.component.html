@@ -5,12 +5,19 @@
   New Counter
   </button>
   <div class="counter-grid">
+    <app-super-counter
+      *ngFor="let counter of superCounters"
+      count="0"
+    ></app-super-counter>
     <app-counter-detail
       *ngFor="let counter of counters"
       count="0"
     ></app-counter-detail>
   </div>
   <div>
-    Number of counters: {{ counters.length }}
+    Counters: {{ counters.length }}
+  </div>
+  <div>
+    Super Counters: {{ superCounters.length }}
   </div>
 </div>

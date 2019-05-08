@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+const defaultCount = 0;
 
 @Component({
   selector: 'app-super-counter',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./super-counter.component.css']
 })
 export class SuperCounterComponent implements OnInit {
+  @Input() count: number;
 
-  constructor() { }
+  constructor() {
+    this.count = defaultCount;
+  }
 
   ngOnInit() {
   }
+
+  decrease() { this.count -= 3; }
+
+  increase() { this.count += 3; }
 
 }

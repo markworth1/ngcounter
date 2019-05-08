@@ -1,3 +1,15 @@
-<p>
-  super-counter works!
-</p>
+<div class="counter">
+    <div class="count">{{ count }}</div>
+  
+    <div class="counter-buttons">
+      <button
+        [disabled]="count <= 0"
+        (click)="decrease()"
+      >-</button>
+  
+      <button
+        (click)="increase()"
+      >+</button>
+    </div>
+  </div>
+  
