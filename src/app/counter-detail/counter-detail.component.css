@@ -1,0 +1,13 @@
+.counter {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 1em;
+    min-width: 4em;
+}
+
+.counter-buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: stretch;
+}
+

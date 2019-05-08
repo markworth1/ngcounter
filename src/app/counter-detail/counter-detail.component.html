@@ -1,11 +1,13 @@
-<div>
-  <button
-    (click)="decrease()"
-  >-</button>
+<div class="counter">
+  <div class="count">{{ count }}</div>
 
-  <div>{{ count }}</div>
+  <div class="counter-buttons">
+    <button
+      (click)="decrease()"
+    >-</button>
 
-  <button
-    (click)="increase()"
-  >+</button>
+    <button
+      (click)="increase()"
+    >+</button>
+  </div>
 </div>

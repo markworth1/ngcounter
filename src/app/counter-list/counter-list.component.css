@@ -1,0 +1,5 @@
+.counter-grid {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 1em;
+}
