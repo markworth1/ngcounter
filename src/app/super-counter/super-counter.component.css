@@ -1,7 +1,8 @@
 .counter {
+    background-color: aqua;
     display: flex;
     flex-flow: column nowrap;
-    padding: 1em;
+    margin: 1em;
     min-width: 8em;
 }
 

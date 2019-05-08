@@ -1,9 +1,9 @@
 <div class="counter">
-    <div class="count">{{ count }}</div>
+    <div class="count">{{ count.value }}</div>
   
     <div class="counter-buttons">
       <button
-        [disabled]="count <= 0"
+        [disabled]="count.value <= 0"
         (click)="decrease()"
       >-</button>
   
