@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 const defaultCount: number = 0;
 
@@ -8,7 +8,8 @@ const defaultCount: number = 0;
   styleUrls: ['./counter-detail.component.css']
 })
 export class CounterDetailComponent implements OnInit {
-  count: number;
+  @Input() count: number;
+
   constructor() {
     this.count = defaultCount;
   }

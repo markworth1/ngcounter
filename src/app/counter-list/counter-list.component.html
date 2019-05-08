@@ -1,3 +1,13 @@
-<p>
-  counter-list works!
-</p>
+<div>
+  <button
+    (click)="addCounter()"
+  >
+  New Counter
+  </button>
+  <div class="counter-grid">
+    <app-counter-detail
+      *ngFor="let counter of counters"
+      count="0"
+    ></app-counter-detail>
+  </div>
+</div>
