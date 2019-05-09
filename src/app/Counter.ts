@@ -9,6 +9,16 @@ export class Counter {
     this.value = val;
     this.type = type;
     this.changeValue = changeValue;
+    if (this.type !== 'normal') {
+      this.playSound();
+    }
+  }
+
+  playSound() {
+    let audio = new Audio();
+    audio.src = "";
+    audio.load();
+    audio.play();
   }
 
   increase() {
