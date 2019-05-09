@@ -1,10 +1,31 @@
 .counter {
     display: flex;
     flex-flow: column nowrap;
-    padding: 1em;
+    background-color: silver;
+    margin: 1em;
     min-width: 4em;
 }
 
+.counter.super {
+    min-width: 8em;
+    background-color: aqua;
+}
+
+.counter.super-duper {
+    min-width: 12em;
+    background-color: purple;
+    color: white;
+}
+
+.counter.colossal {
+    min-width: 16em;
+    background-color: orangered;
+    font-weight: bolder;
+}
+
+.count {
+    padding: 2em;
+}
 .counter-buttons {
     display: flex;
     flex-flow: row nowrap;

@@ -1,14 +1,21 @@
-<div class="counter">
-  <div class="count">{{ count.value }}</div>
+<div [ngClass]="[count.type, 'counter']">
+  <div [ngClass]="[count.type, 'count']">{{ count.value }}</div>
 
-  <div class="counter-buttons">
+  <div [ngClass]="[count.type, 'counter-buttons']">
     <button
+      *ngIf="!['super-duper','colossal'].includes(count.type)"
       [disabled]="count.value <= 0"
-      (click)="decrease()"
+      (click)="count.decrease()"
     >-</button>
 
     <button
-      (click)="increase()"
+      *ngIf="!['super-duper','colossal'].includes(count.type)"
+      (click)="count.increase()"
     >+</button>
+
+    <button
+      *ngIf="count.type === 'super-duper'"
+      (click)="count.start()"
+    >start</button>
   </div>
 </div>

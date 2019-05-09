@@ -14,9 +14,4 @@ export class CounterDetailComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  decrease() { this.count.value--; }
-
-  increase() { this.count.value++; }
-
 }

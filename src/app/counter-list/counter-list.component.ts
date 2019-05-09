@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CounterDetailComponent } from '../counter-detail/counter-detail.component';
-import { SuperCounterComponent } from '../super-counter/super-counter.component';
 import { Counter } from '../Counter';
 
 @Component({
@@ -11,22 +10,49 @@ import { Counter } from '../Counter';
 export class CounterListComponent implements OnInit {
   counters: Counter[] = []; 
   superCounters: Counter[] = [];
+  superDuperCounters: Counter[] = [];
+  colossalCounters: Counter[] = [];
 
   constructor() { }
 
   addCounter() {
-    this.counters.push(new Counter(0));
-    //this.counters.push(new CounterDetailComponent())
-    if (this.counters.length === 6) {
+    this.counters.push(new Counter(0, 'normal', 1));
+
+    if (this.counters.length === 7) {
       let superCounterInitialValue:number = this.counters.reduce((tot,val) => {
         console.log(val.value);
         tot += val.value;
         return tot;
       }, 0)
-      console.log(superCounterInitialValue);
-      this.superCounters.push(new Counter(superCounterInitialValue));
+
+      this.superCounters.push(new Counter(superCounterInitialValue, 'super', 3));
       this.counters = [];
     }
+
+    if (this.superCounters.length === 4) {
+      let initialValue:number = this.superCounters.reduce((tot,val) => {
+        console.log(val.value);
+        tot += val.value;
+        return tot;
+      }, 0)
+
+      this.superDuperCounters.push(new Counter(initialValue, 'super-duper', 1));
+      this.superCounters = [];
+    }
+
+    if (this.superDuperCounters.length === 4) {
+      let initialValue:number = this.superDuperCounters.reduce((tot,val) => {
+        console.log(val.value);
+        tot += val.value;
+        return tot;
+      }, 0)
+
+      let colossalCounter = new Counter(initialValue, 'colossal', 1);
+      this.colossalCounters.push(colossalCounter);
+      colossalCounter.start();
+      this.superDuperCounters = [];
+    }
+
   }
 
   ngOnInit() {

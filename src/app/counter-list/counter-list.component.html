@@ -5,10 +5,18 @@
   New Counter
   </button>
   <div class="counter-grid">
-    <app-super-counter
+    <app-counter-detail
+      *ngFor="let counter of colossalCounters"
+      [count]="counter"
+    ></app-counter-detail>
+    <app-counter-detail
+      *ngFor="let counter of superDuperCounters"
+      [count]="counter"
+    ></app-counter-detail>
+    <app-counter-detail
       *ngFor="let counter of superCounters"
       [count]="counter"
-    ></app-super-counter>
+    ></app-counter-detail>
     <app-counter-detail
       *ngFor="let counter of counters"
       [count]="counter"
