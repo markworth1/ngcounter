@@ -16,7 +16,7 @@ export class Counter {
 
   playSound() {
     let audio = new Audio();
-    audio.src = "";
+    audio.src = "http://www.wavsource.com/snds_2018-06-03_5106726768923853/sfx/alarm_beep.wav";
     audio.load();
     audio.play();
   }
